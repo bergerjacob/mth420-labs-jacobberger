@@ -7,6 +7,8 @@
 
 
 # Problem 1 (write code below)
+if __name__ == "__main__":
+    print("Hello, world!")
 
 
 # Problem 2
@@ -14,7 +16,7 @@ def sphere_volume(r):
     """ Return the volume of the sphere of radius 'r'.
     Use 3.14159 for pi in your computation.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    return 4/3*3.14159* r**3
 
 
 # Problem 3
@@ -22,7 +24,8 @@ def isolate(a, b, c, d, e):
     """ Print the arguments separated by spaces, but print 5 spaces on either
     side of b.
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    print(a, b, c, sep=" "*5, end=" ")
+    print(d,e)
 
 
 # Problem 4
@@ -36,7 +39,7 @@ def first_half(my_string):
         >>> first_half("ipython")
         'ipy'
     """
-    raise NotImplementedError("Problem 4 Incomplete")
+    return my_string[:len(my_string)//2]
 
 def backward(my_string):
     """ Return the reverse of the string 'my_string'.
@@ -95,3 +98,9 @@ def alt_harmonic(n):
     harmonic series, which approximates ln(2).
     """
     raise NotImplementedError("Problem 8 Incomplete")
+
+
+if __name__ == "__main__":
+    print(sphere_volume(2))
+    isolate(1,2,3,4,5)
+    print(first_half("python"))
