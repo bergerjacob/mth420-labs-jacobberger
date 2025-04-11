@@ -13,7 +13,7 @@ def prob1(L):
     """Return the minimum, maximum, and average of the entries of L
     (in that order, separated by a comma).
     """
-    raise NotImplementedError("Problem 1 Incomplete")
+    return min(L), max(L), sum(L)/len(L)
 
 
 # Problem 2
@@ -52,7 +52,10 @@ def power_set(A):
     raise NotImplementedError("Problem 4 Incomplete")
 
 
-# Problem 5: Implement shut the box.
-def shut_the_box(player, timelimit):
-    """Play a single game of shut the box."""
-    raise NotImplementedError("Problem 5 Incomplete")
+# # Problem 5: Implement shut the box.
+# def shut_the_box(player, timelimit):
+#     """Play a single game of shut the box."""
+#     raise NotImplementedError("Problem 5 Incomplete")
+
+if __name__ == "__main__":
+    print(prob1([1,2,3]))
