@@ -1,0 +1,57 @@
+05/02/25 19:56
+
+Problem 1 (5 points):
+prob1() failed
+Score += 0
+
+Problem 2 (5 points):
+prob2() failed
+Score += 0
+
+Problem 3 (5 points):
+Score += 5
+
+Problem 4 (5 points):
+Score += 5
+
+Problem 5 (5 points):
+Score += 5
+
+Problem 6 (10 points):
+Score += 10
+
+Problem 7 (10 points):
+AttributeError: module 'JacobBerger.NumpyIntro.numpy_intro' has no attribute 'prob7'
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 30/50 = 60.0%
+
+Linter Notes: 
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:13:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:15:24: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:16:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:17:21: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:17:24: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:17:27: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:23:20: E201 whitespace after '['
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:24:20: E201 whitespace after '['
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:25:22: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:34:27: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:34:30: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:35:19: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:35:22: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:35:46: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:35:49: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:65:32: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:65:34: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:66:27: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:66:30: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:124:29: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:124:31: E231 missing whitespace after ','
+/home/gibsonn/Instructor-Materials/JacobBerger/NumpyIntro/numpy_intro.py:124:33: E231 missing whitespace after ','
+
+
+-------------------------------------------------------------------------------
+
