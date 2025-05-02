@@ -11,7 +11,7 @@ import numpy as np
 def prob1():
     """ Define the matrices A and B as arrays. Return the matrix product AB. """
     A = np.array([[3,-1, 4],
-                  [1, 5, 9]])
+                  [1, 5, -9]])
     B = np.array([[2, 6,-5, 3],
                   [5,-8, 9, 7],
                   [9,-3,-2,-3]])
@@ -23,7 +23,7 @@ def prob2():
     A = np.array([[ 3, 1, 4],
                   [ 1, 5, 9],
                   [-5,3, 1]])
-    return (A @ A @ A) + 9 * A @ A - 15 * A
+    return -1 * (A @ A @ A) + 9 * A @ A - 15 * A
 
 
 def prob3():
@@ -119,6 +119,7 @@ def prob6(A):
 
 if __name__ == "__main__":
     print(prob1())
+    print("prob2:")
     print(prob2())
     print(prob3())
     print(prob4(np.array([-1,5,0,-10])))
