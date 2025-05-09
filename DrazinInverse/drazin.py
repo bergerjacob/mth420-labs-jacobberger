@@ -77,25 +77,25 @@ def drazin_inverse(A, tol=1e-4):
     n = A.shape[0]
 
     f_nonzero = lambda x: abs(x) > tol
-    T1, Q1, k1 = la.schur(A, sort=f_nonzero, output='complex') # k1 is the number of non-zero eigenvalues
+    T1, Q1, k1 = la.schur(A, sort=f_nonzero, output='complex')
 
     f_zero = lambda x: abs(x) <= tol
-    T2, Q2, k2_unused = la.schur(A, sort=f_zero, output='complex') # k2 should be n-k1
+    T2, Q2, k2_unused = la.schur(A, sort=f_zero, output='complex')
 
     U_cols_M = Q1[:, :k1]
-    U_cols_N = Q2[:, :(n - k1)] # Use n-k1 for robustness
+    U_cols_N = Q2[:, :(n - k1)]
     
     U = np.hstack((U_cols_M, U_cols_N))
     
     try:
         U_inv = np.linalg.inv(U)
     except np.linalg.LinAlgError:
-        print("Warning: U matrix is singular or nearly singular.") # Should not happen with correct Schur vectors
-        U_inv = np.linalg.pinv(U) # Use pseudo-inverse as a fallback if truly stuck
+        print("Warning: U matrix is singular or nearly singular.")
+        U_inv = np.linalg.pinv(U)
 
     V = U_inv @ A @ U
 
-    Z = np.zeros_like(A, dtype=complex if np.iscomplexobj(V) or np.iscomplexobj(A) else float) # Match dtype
+    Z = np.zeros_like(A, dtype=complex if np.iscomplexobj(V) or np.iscomplexobj(A) else float)
 
     if k1 > 0:
         M_block = V[:k1, :k1]
