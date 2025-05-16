@@ -1,0 +1,19 @@
+05/16/25 14:28
+
+Problem 1 (15 points):
+Score += 15
+
+Problem 2 (15 points):
+no plot
+Score += 0
+
+Problem 3 (20 points):
+no plot
+Score += 0
+
+Total score: 15/50 = 30.0%
+
+Linter Notes: None
+
+-------------------------------------------------------------------------------
+
