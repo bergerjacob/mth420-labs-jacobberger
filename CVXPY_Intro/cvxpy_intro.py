@@ -73,7 +73,26 @@ def prob3():
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    p = cp.Variable(6, nonneg=True)
+    
+    costs = np.array([4, 7, 6, 8, 8, 9])
+    
+    objective = cp.Minimize(costs.T @ p)
+    
+    constraints = [
+        # Supply constraints
+        p[0] + p[1] <= 7,  # Supply from Center 1
+        p[2] + p[3] <= 2,  # Supply from Center 2
+        p[4] + p[5] <= 4,  # Supply from Center 3
+        # Demand constraints
+        p[0] + p[2] + p[4] == 5,  # Demand at Center 4
+        p[1] + p[3] + p[5] == 8   # Demand at Center 5
+    ]
+    
+    problem = cp.Problem(objective, constraints)
+    optimal_value = problem.solve()
+    
+    return p.value, optimal_value
 
 
 # Problem 4
@@ -86,7 +105,19 @@ def prob4():
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 4 Incomplete")
+    Q_matrix = np.array([[3., 2., 1.],
+                         [2., 4., 2.],
+                         [1., 2., 3.]])
+    r_vector = np.array([3., 0., 1.])
+    
+    x_var = cp.Variable(3)
+    
+    objective = cp.Minimize(0.5 * cp.quad_form(x_var, Q_matrix) + r_vector.T @ x_var)
+    problem = cp.Problem(objective)
+    
+    optimal_value = problem.solve()
+    
+    return x_var.value, optimal_value
 
 
 # Problem 5
@@ -103,7 +134,20 @@ def prob5(A, b):
         The optimizer x (ndarray)
         The optimal value (float)
     """
-    raise NotImplementedError("Problem 5 Incomplete")
+    n = A.shape[1]
+    x = cp.Variable(n)
+    
+    objective = cp.Minimize(cp.norm(A @ x - b, 2))
+    
+    constraints = [
+        cp.sum(x) == 1,
+        x >= 0
+    ]
+    
+    problem = cp.Problem(objective, constraints)
+    optimal_value = problem.solve()
+    
+    return x.value, optimal_value
 
 
 # # Problem 6
@@ -122,5 +166,8 @@ def prob5(A, b):
 
 
 if __name__ == "__main__":
-    print(prob1())
-    print(l1Min(np.array([[1, 2, 1, 1], [0, 3, -2, -1]]), np.array([7, 4])))
+    # print(prob1())
+    # print(l1Min(np.array([[1, 2, 1, 1], [0, 3, -2, -1]]), np.array([7, 4])))
+    # print(prob3())
+    # print(prob4())
+    pass
