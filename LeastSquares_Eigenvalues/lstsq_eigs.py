@@ -9,7 +9,6 @@ import numpy as np
 from cmath import sqrt
 from scipy import linalg as la
 from matplotlib import pyplot as plt
-import os
 
 
 # Problem 1
@@ -35,13 +34,7 @@ def line_fit():
     index for the data in housing.npy. Plot both the data points and the least
     squares line.
     """
-    try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        file_path = os.path.join(script_dir, "housing.npy")
-        housing_data = np.load(file_path)
-    except FileNotFoundError:
-        print("Error: 'housing.npy' not found.")
-        return
+    housing_data = np.load("housing.npy")
 
     years = housing_data[:, 0]
     indices = housing_data[:, 1]
@@ -75,13 +68,7 @@ def polynomial_fit():
     the year to the housing price index for the data in housing.npy. Plot both
     the data points and the least squares polynomials in individual subplots.
     """
-    try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        file_path = os.path.join(script_dir, "housing.npy")
-        housing_data = np.load(file_path)
-    except FileNotFoundError:
-        print(f"Error: '{file_path}' not found.")
-        return
+    housing_data = np.load("housing.npy")
 
     years = housing_data[:, 0]    # Independent variable (x)
     indices = housing_data[:, 1]  # Dependent variable (y)
